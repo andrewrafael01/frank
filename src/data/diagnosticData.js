@@ -174,7 +174,7 @@ export const DIAGNOSTIC_DATA = {
     title: 'External Factors',
     question: 'Question: When it comes to society, how much of a role does "the system" play in the tragedy?',
     caseEvidence: [
-      'The Creature is rejected instantly by humans and is judged mainly on appearance rather than behavior, "I was terrified when I viewed myself in a transparent pool!", showing how society\'s fear of difference affects its self understanding.',
+      'The Creature is rejected instantly by humans and is judged mainly on appearance rather than behavior, "I was terrified when I viewed myself in a transparent pool", showing how society\'s fear of difference affects its self understanding.',
       'Victor\'s pursuit of knowledge without considering consequences follows society\'s expectations of scientific progress.',
       'The Creature was not allowed to enter human communities despite showing an ability to learn and connect.',
       'Social norms created a world where differences are punished and conformity is enforced.'
