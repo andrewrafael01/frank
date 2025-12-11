@@ -17,6 +17,12 @@ export default function EvaluationLab() {
     allAssessed
   } = useCase()
 
+  // Calculate percentages that add up to 100%
+  const total = victorResponsibility + creatureResponsibility + systemResponsibility
+  const victorPct = total > 0 ? (victorResponsibility / total * 100) : 33.3
+  const creaturePct = total > 0 ? (creatureResponsibility / total * 100) : 33.3
+  const systemPct = total > 0 ? (100 - victorPct - creaturePct) : 33.4 // Ensure it adds up to 100%
+
   const getCaseSummary = () => {
     const max = Math.max(victorResponsibility, creatureResponsibility, systemResponsibility)
     
@@ -96,9 +102,9 @@ export default function EvaluationLab() {
                     <div className="bar-container">
                       <div 
                         className="bar-fill victor-fill" 
-                        style={{ width: `${victorResponsibility}%` }}
+                        style={{ width: `${victorPct}%` }}
                       ></div>
-                      <span className="bar-percentage">{Math.round(victorResponsibility)}%</span>
+                      <span className="bar-percentage">{Math.round(victorPct)}%</span>
                     </div>
                   </div>
 
@@ -110,9 +116,9 @@ export default function EvaluationLab() {
                     <div className="bar-container">
                       <div 
                         className="bar-fill creature-fill" 
-                        style={{ width: `${creatureResponsibility}%` }}
+                        style={{ width: `${creaturePct}%` }}
                       ></div>
-                      <span className="bar-percentage">{Math.round(creatureResponsibility)}%</span>
+                      <span className="bar-percentage">{Math.round(creaturePct)}%</span>
                     </div>
                   </div>
 
@@ -124,9 +130,9 @@ export default function EvaluationLab() {
                     <div className="bar-container">
                       <div 
                         className="bar-fill system-fill" 
-                        style={{ width: `${systemResponsibility}%` }}
+                        style={{ width: `${systemPct}%` }}
                       ></div>
-                      <span className="bar-percentage">{Math.round(systemResponsibility)}%</span>
+                      <span className="bar-percentage">{Math.round(systemPct)}%</span>
                     </div>
                   </div>
                 </div>

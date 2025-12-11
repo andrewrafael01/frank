@@ -18,9 +18,12 @@ export default function CaseReport() {
   } = useCase()
   const getNarrativeSummary = () => {
     const total = victorResponsibility + creatureResponsibility + systemResponsibility
-    const victorPct = total > 0 ? (victorResponsibility / total * 100).toFixed(1) : 33.3
-    const creaturePct = total > 0 ? (creatureResponsibility / total * 100).toFixed(1) : 33.3
-    const systemPct = total > 0 ? (systemResponsibility / total * 100).toFixed(1) : 33.3
+    const victorPctCalc = total > 0 ? parseFloat((victorResponsibility / total * 100).toFixed(1)) : 33.3
+    const creaturePctCalc = total > 0 ? parseFloat((creatureResponsibility / total * 100).toFixed(1)) : 33.3
+    const systemPctCalc = total > 0 ? parseFloat((100 - victorPctCalc - creaturePctCalc).toFixed(1)) : 33.4
+    const victorPct = victorPctCalc.toFixed(1)
+    const creaturePct = creaturePctCalc.toFixed(1)
+    const systemPct = systemPctCalc.toFixed(1)
 
     const max = Math.max(victorResponsibility, creatureResponsibility, systemResponsibility)
     
@@ -41,9 +44,9 @@ export default function CaseReport() {
   }
 
   const total = victorResponsibility + creatureResponsibility + systemResponsibility
-  const victorPct = total > 0 ? (victorResponsibility / total * 100).toFixed(1) : 33.3
-  const creaturePct = total > 0 ? (creatureResponsibility / total * 100).toFixed(1) : 33.3
-  const systemPct = total > 0 ? (systemResponsibility / total * 100).toFixed(1) : 33.3
+  const victorPct = total > 0 ? parseFloat((victorResponsibility / total * 100).toFixed(1)) : 33.3
+  const creaturePct = total > 0 ? parseFloat((creatureResponsibility / total * 100).toFixed(1)) : 33.3
+  const systemPct = total > 0 ? parseFloat((100 - victorPct - creaturePct).toFixed(1)) : 33.4 // Ensure it adds up to 100%
 
   return (
     <div className="case-report-page">
