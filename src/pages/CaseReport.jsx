@@ -90,7 +90,7 @@ export default function CaseReport() {
             </p>
           </div>
 
-          <RapVideoEmbed videoId="YOUR_VIDEO_ID_HERE" />
+          <RapVideoEmbed videoId="YEz3Lmns9GI" />
 
           {/* 
             Original rap verses (hidden, kept for reference):
