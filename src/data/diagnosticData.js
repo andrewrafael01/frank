@@ -205,7 +205,7 @@ export const DIAGNOSTIC_DATA = {
   },
   deEscalation: {
     title: 'Opportunity for De-Escalation',
-    question: 'Question: When chances were there to prevent harm, who failed to de-escalate the situiation?',
+    question: 'Question: When chances were there to prevent harm, who failed to de-escalate the situation?',
     caseEvidence: [
       'The Creature begged Victor to listen during their first confrontation and offered peace in exchange for understanding.',
       'Victor refused multiple opportunities to acknowledge the Creature\'s suffering or take responsibility.',
