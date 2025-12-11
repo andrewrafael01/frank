@@ -58,6 +58,8 @@ export default function CaseIntake() {
             >
               What is this investigation?
             </button>
+            
+            <p className="case-intake-byline">By:Andrew-Rafael Said</p>
           </div>
 
           <div className="case-intake-right">
