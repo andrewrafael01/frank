@@ -172,7 +172,7 @@ export const DIAGNOSTIC_DATA = {
   },
   societal: {
     title: 'External Factors',
-    question: 'Question: When it comes to society, how much of a role does "the system" play in the tragedy?',
+    question: 'Question: How much of a role does society play in the tragedy?',
     caseEvidence: [
       'The Creature is rejected instantly by humans and is judged mainly on appearance rather than behavior, "I was terrified when I viewed myself in a transparent pool", showing how society\'s fear of difference affects its self understanding.',
       'Victor\'s pursuit of knowledge without considering consequences follows society\'s expectations of scientific progress.',
